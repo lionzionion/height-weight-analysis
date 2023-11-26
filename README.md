@@ -7,7 +7,7 @@ No trecho de código abaixo, criamos um NumPy array chamado altura_em_centimetro
 
 # Lista de alturas em centímetros
 
-lista_de_centimetros = list(range(170, 190, 5))
+lista_de_centimetros = list(range(170, 190, 5))´´´
 
 # Criar um ndarray chamado altura_em_centimetros
 
