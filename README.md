@@ -1,8 +1,9 @@
 # Análise de Altura e Peso
 
-# 1) Alturas
 
-## Copiar código
+## 1) Alturas
+
+### Copiar código
 
 ```python import numpy as np
 
@@ -23,9 +24,9 @@ print("Altura em metros:", altura_em_metros)
 Neste trecho, você está criando um ndarray chamado altura_em_centimetros a partir da lista lista_de_centimetros e, em seguida, 
 criando outro ndarray chamado altura_em_metros convertendo os valores de altura_em_centimetros para metros. Os resultados são impressos no final.***
 
-# 2) IMC
+## 2) IMC
 
-## Copiar código
+### Copiar código
 
 ```python ## Lista de pesos em kg
 lista_pesos = [70, 75, 80, 85]
@@ -49,9 +50,9 @@ print("IMC:", imc_arredondado)
 Aqui, você está criando um ndarray chamado pesos a partir da lista lista_pesos. Em seguida, 
 você calcula o IMC utilizando a fórmula e arredonda os resultados para duas casas decimais. Os resultados finais são impressos.**
 
-# 3) Endividamento
+## 3) Endividamento
 
-## Copiar código
+### Copiar código
 
 ```python # Lista dados_financeiros
 dados_financeiros = [[3000, 2500, 1000, 10000], [1000, 2500, 3000, 5000], [6000, 5500, 7000, 16000]]
@@ -76,9 +77,9 @@ print(dados_financeiros_ndarray)
 Neste trecho, você transforma a lista dados_financeiros em um ndarray chamado dados_financeiros_ndarray. Em seguida, você exibe o ndarray, 
 calcula o endividamento total para cada indivíduo e corrige um valor específico (2500 por 3000). Os resultados finais são impressos.**
 
-# 4) Identificação de Valores Zero
+## 4) Identificação de Valores Zero
 
-## Copiar código
+### Copiar código
 
 ```python # np.random.seed(1234) garante a reprodutibilidade dos resultados
 np.random.seed(1234)
