@@ -4,16 +4,16 @@
 
 ```python import numpy as np
 
-## Lista de alturas em centímetros
+# Lista de alturas em centímetros
 lista_de_centimetros = list(range(170, 190, 5))
 
-## i. Criar um ndarray chamado altura_em_centimetros
+# i. Criar um ndarray chamado altura_em_centimetros
 altura_em_centimetros = np.array(lista_de_centimetros)
 
-## ii. Criar um objeto altura_em_metros
+# ii. Criar um objeto altura_em_metros
 altura_em_metros = altura_em_centimetros / 100.0
 
-## Mostrar os resultados
+# Mostrar os resultados
 print("Altura em centímetros:", altura_em_centimetros)
 print("Altura em metros:", altura_em_metros)
 ```
@@ -28,16 +28,16 @@ criando outro ndarray chamado altura_em_metros convertendo os valores de altura_
 ```python ## Lista de pesos em kg
 lista_pesos = [70, 75, 80, 85]
 
-## Criar um ndarray chamado pesos
+# Criar um ndarray chamado pesos
 pesos = np.array(lista_pesos)
 
-## Calcular o IMC
+# Calcular o IMC
 imc = pesos / altura_em_metros ** 2
 
-## Arredondar os resultados do IMC
+# Arredondar os resultados do IMC
 imc_arredondado = np.round(imc, 2)
 
-## Mostrar os resultados
+# Mostrar os resultados
 print("Altura em centímetros:", altura_em_centimetros)
 print("Altura em metros:", altura_em_metros)
 print("Pesos em kg:", pesos)
@@ -70,4 +70,33 @@ dados_financeiros_ndarray[0, 1] = 3000
 print("Dados Financeiros (após correção):")
 print(dados_financeiros_ndarray)
 ```
+**Explicação:
+Neste trecho, você transforma a lista dados_financeiros em um ndarray chamado dados_financeiros_ndarray. Em seguida, você exibe o ndarray, 
+calcula o endividamento total para cada indivíduo e corrige um valor específico (2500 por 3000). Os resultados finais são impressos.**
 
+# 4) Identificação de Valores Zero
+
+## Copiar código
+
+```python # np.random.seed(1234) garante a reprodutibilidade dos resultados
+np.random.seed(1234)
+
+# i) Criação do objeto bool_zero
+poi = np.random.poisson(3, 100)
+bool_zero = poi == 0
+
+# ii) Contagem de valores zero
+quantidade_zeros = np.sum(bool_zero)
+
+# iii) Utilização da indexação booleana para criar poi_nao_zero
+poi_nao_zero = poi[~bool_zero]  # ~ inverte os valores booleanos
+
+# Exibição dos resultados
+print("Objeto poi:", poi)
+print("Objeto bool_zero:", bool_zero)
+print("Quantidade de zeros:", quantidade_zeros)
+print("Objeto poi_nao_zero:", poi_nao_zero)
+```
+**Explicação:
+Aqui, você gera um ndarray chamado poi com números pseudoaleatórios seguindo uma distribuição de Poisson. Em seguida, você cria um objeto booleano bool_zero indicando quais valores de poi são zero. 
+Você conta a quantidade de zeros, e finalmente, você cria um novo ndarray poi_nao_zero excluindo os valores zero usando a indexação booleana. Os resultados são impressos no final.**
